@@ -1,0 +1,6 @@
+{
+    "name": "STEINS;GATE: My Darling's Embrace",
+    "image": "MDE.bmp",
+    "notice": "该补丁只适用于英文版游戏\n应用补丁前请确认 Steam 中已将游戏设为英文版并且游戏更新完毕\n如果之前在日文版游戏中应用过补丁并且提示失败:\n\t1. 点击删除备份\n\t2. 验证游戏完整性\n\t3. 尝试重新应用补丁\n如果依然应用失败或碰到其他问题请到 GitHub 或贴吧反馈",
+    "default_path": "D:\\Program Files (x86)\\Steam\\steamapps\\common\\SG_My Darling's Embrace"
+}

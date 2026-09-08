@@ -1,0 +1,28 @@
+# 构建输出
+**/bin/
+**/obj/
+*.pdb
+*.exe
+MagesLib.dll
+
+# 本地与恢复文件
+.vs/
+.vscode/
+__pycache__/
+*.pyc
+*.user
+*.suo
+*.log
+*.bak
+*.backup-*
+*.before-*
+.env
+.env.*
+USRDIR/
+USRDIR.bak/
+SAVEDATA.DAT
+*.zip
+/dist/
+
+# 依赖为随上游分发的 fastJSON.dll
+!fastJSON.dll

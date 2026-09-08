@@ -1,0 +1,26 @@
+STEINS;GATE: My Darling's Embrace 简体中文补丁 v1.2
+
+适用：Steam 英文版游戏，Windows + .NET Framework 4.5 或兼容的较新版本。
+
+安装
+1. 在 Steam 中把游戏语言设为英语，等待更新完成，退出游戏。
+2. 完整解压本 ZIP，不要只取出 EasyPatcher.exe。
+3. 运行 EasyPatcher.exe，选择游戏安装目录（内含 USRDIR 文件夹）。
+4. 点击“应用补丁”，等待完成后正常启动游戏。
+
+补丁会统一应用文本、字体、UI 与帮助页修改，无需分别选择。
+本版已将“真由喜”“真由嘻”统一纠正为“真由氏”。
+
+备份与恢复
+请先自行备份重要存档。补丁器会在游戏目录保留 USRDIR.bak 资源备份。
+“删除备份”不会恢复游戏，不建议在正常安装或更新时随意使用。
+恢复原版：退出游戏，将 USRDIR.bak 中的对应 MPK 覆盖回 USRDIR，或通过 Steam 验证游戏文件完整性。
+补丁仅适用于英文版；若游戏版本、语言或旧备份来源不一致，请先验证完整性再应用。
+
+来源
+工具基于 FENGberd 的 MagesTools / EasyPatcher / MagesLib 修改：
+https://github.com/fengberd/MagesTools
+原作者 MIT 许可证见 LICENSE；其他依赖及游戏素材说明见 THIRD_PARTY_NOTICES.md。
+
+项目与说明
+https://github.com/1VeniVediVeci1/SG-MDE-Chinese-Patch
