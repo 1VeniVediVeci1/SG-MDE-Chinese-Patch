@@ -14,7 +14,7 @@
 
 ## 下载与安装
 
-从 [v1.2 Release](https://github.com/1VeniVediVeci1/SG-MDE-Chinese-Patch/releases/tag/v1.2) 下载 **`SG-MDE-Chinese-Patch-v1.2.zip`**。请下载这个完整安装包，而不是 GitHub 自动生成的 `Source code` 压缩包。
+从 [v1.2 Release](https://github.com/1VeniVediVeci1/SG-MDE-Chinese-Patch/releases/latest) 下载 **`SG-MDE-Chinese-Patch-v1.2.zip`**。请下载这个完整安装包，而不是 GitHub 自动生成的 `Source code` 压缩包。
 
 1. 在 Steam 中将游戏语言设为**英语**，等待更新完成，然后退出游戏。
 2. 将补丁 ZIP **完整解压**到一个可写目录，保留 `EasyPatcher.exe`、两个 DLL、配置文件与 `berd` 文件夹的相对位置。
