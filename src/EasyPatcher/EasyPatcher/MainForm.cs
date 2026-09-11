@@ -42,6 +42,8 @@ public class MainForm : Form
 
 	private Button button_delete_bak;
 
+	private Button button_remove_video;
+
 	public MainForm()
 	{
 		InitializeComponent();
@@ -145,6 +147,9 @@ public class MainForm : Form
 			try
 			{
 				Log("[BERD] 正在应用全部补丁...");
+				string gameRoot = ((Control)textBox_path).Text;
+				string videoPayload = Path.GetFullPath(Path.Combine(PATCH_DIR, "video-subtitles"));
+				VideoSubtitleRuntime.EnsureInstallable(gameRoot, videoPayload);
 				string text = Path.Combine(((Control)textBox_path).Text, "USRDIR");
 				Log("[BERD] 正在寻找 USRDIR...");
 				if (!Directory.Exists(text))
@@ -217,6 +222,9 @@ public class MainForm : Form
 						return;
 					}
 				}
+				Log("[VIDEO] 正在部署外置 ASS 字幕运行时...");
+				VideoSubtitleRuntime.Install(gameRoot, videoPayload);
+				Log("[VIDEO] OP01 和 prologue01 外置字幕已部署.");
 				MessageBox.Show("补丁应用完成, 请检查游戏是否能正常运行", "提示", (MessageBoxButtons)0, (MessageBoxIcon)64);
 				Log("[FENGberd] 操作完成, 请检查游戏是否能正常运行");
 			}
@@ -230,6 +238,24 @@ public class MainForm : Form
 				((Control)button_patch).Enabled = true;
 			});
 		});
+	}
+
+	private void button_remove_video_Click(object sender, EventArgs e)
+	{
+		try
+		{
+			if ((int)MessageBox.Show("确认移除外置视频字幕运行时吗？不会改动原始视频文件。", "操作确认", (MessageBoxButtons)1, (MessageBoxIcon)48) != 1)
+			{
+				return;
+			}
+			VideoSubtitleRuntime.Remove(((Control)textBox_path).Text);
+			Log("[VIDEO] 外置 ASS 字幕运行时已移除.");
+			MessageBox.Show("外置视频字幕已移除", "提示", (MessageBoxButtons)0, (MessageBoxIcon)64);
+		}
+		catch (Exception ex)
+		{
+			Oops(ex.ToString());
+		}
 	}
 
 	private void button_delete_bak_Click(object sender, EventArgs e)
@@ -352,10 +378,11 @@ public class MainForm : Form
 		linkLabel_version = new LinkLabel();
 		pictureBox_main = new PictureBox();
 		button_delete_bak = new Button();
+		button_remove_video = new Button();
 		((ISupportInitialize)pictureBox_main).BeginInit();
 		((Control)this).SuspendLayout();
 		((Control)button_patch).Font = new Font("宋体", 9f);
-		((Control)button_patch).Location = new Point(266, 39);
+		((Control)button_patch).Location = new Point(185, 39);
 		((Control)button_patch).Name = "button_patch";
 		((Control)button_patch).Size = new Size(75, 23);
 		((Control)button_patch).TabIndex = 2;
@@ -420,10 +447,18 @@ public class MainForm : Form
 		((Control)button_delete_bak).Text = "删除备份";
 		((ButtonBase)button_delete_bak).UseVisualStyleBackColor = true;
 		((Control)button_delete_bak).Click += button_delete_bak_Click;
+		((Control)button_remove_video).Location = new Point(266, 39);
+		((Control)button_remove_video).Name = "button_remove_video";
+		((Control)button_remove_video).Size = new Size(75, 23);
+		((Control)button_remove_video).TabIndex = 8;
+		((Control)button_remove_video).Text = "移除视频字幕";
+		((ButtonBase)button_remove_video).UseVisualStyleBackColor = true;
+		((Control)button_remove_video).Click += button_remove_video_Click;
 		((ContainerControl)this).AutoScaleDimensions = new SizeF(6f, 12f);
 		((ContainerControl)this).AutoScaleMode = (AutoScaleMode)1;
 		((Form)this).ClientSize = new Size(889, 310);
 		((Control)this).Controls.Add((Control)(object)button_delete_bak);
+		((Control)this).Controls.Add((Control)(object)button_remove_video);
 		((Control)this).Controls.Add((Control)(object)pictureBox_main);
 		((Control)this).Controls.Add((Control)(object)linkLabel_version);
 		((Control)this).Controls.Add((Control)(object)button_select);

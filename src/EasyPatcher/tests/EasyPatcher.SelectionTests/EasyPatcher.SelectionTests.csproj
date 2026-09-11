@@ -7,5 +7,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="../../EasyPatcher/PatchSelection.cs" Link="PatchSelection.cs" />
+    <Compile Include="../../EasyPatcher/VideoSubtitleRuntime.cs" Link="VideoSubtitleRuntime.cs" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,8 @@
+LIBRARY bink2w32.dll
+EXPORTS
+    _BinkOpen@8
+    _BinkClose@4
+    _BinkCopyToBuffer@28
+    _BinkDoFrame@4
+    _BinkGoto@12
+    _BinkSetSoundOnOff@8

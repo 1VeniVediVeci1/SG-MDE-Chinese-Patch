@@ -1,0 +1,42 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Main,Noto Sans CJK SC,46,&H00FFFFFF,&H000000FF,&H00141414,&H00000000,0,0,0,0,100,100,0,0,1,2,0,5,40,40,40,1
+Style: Info,Noto Sans CJK SC,36,&H00FFFFFF,&H000000FF,&H00141414,&H00000000,0,0,0,0,100,100,0,0,1,1.8,0,5,40,40,40,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:02.26,0:00:04.62,Main,prologue-001,0,0,0,,{\an5\pos(960,988)\q2}一切皆为偶然
+Dialogue: 0,0:00:05.08,0:00:10.90,Main,prologue-002,0,0,0,,{\an5\pos(960,988)\q2}但那份偶然，也是这个世界早已定下的意志
+Dialogue: 0,0:00:11.28,0:00:15.26,Main,prologue-003,0,0,0,,{\an5\pos(960,988)\q2}我并没有疯。我再正常不过了
+Dialogue: 0,0:00:15.64,0:00:21.78,Main,prologue-004,0,0,0,,{\an5\pos(960,988)\q2}我在这里说的都是真相，绝不是什么中二病的妄想。
+Dialogue: 0,0:00:21.94,0:00:26.10,Main,prologue-005,0,0,0,,{\an5\pos(960,988)\q2}……即使起因只是一件微不足道的小事
+Dialogue: 0,0:00:26.32,0:00:31.26,Main,prologue-006,0,0,0,,{\an5\pos(960,988)\q2}也可能就此决定未来的大势
+Dialogue: 0,0:00:31.74,0:00:34.45,Main,prologue-007,0,0,0,,{\an5\pos(960,988)\q2}你听说过“蝴蝶效应”吗？
+Dialogue: 0,0:00:35.38,0:00:37.90,Main,prologue-008,0,0,0,,{\an5\pos(960,988)\q2}不知道就去查。
+Dialogue: 0,0:00:38.04,0:00:41.84,Main,prologue-009,0,0,0,,{\an5\pos(960,988)\q2}要明白，你必须谨慎到这种地步
+Dialogue: 0,0:00:43.00,0:00:46.92,Main,prologue-010,0,0,0,,{\an5\pos(960,988)\q2}遗憾的是，当时的我并不谨慎
+Dialogue: 0,0:00:47.10,0:00:52.82,Main,prologue-011,0,0,0,,{\an5\pos(960,988)\q2}如果早知道自己有多愚蠢，就不会落到“这种”境地
+Dialogue: 0,0:00:53.24,0:00:57.92,Main,prologue-012,0,0,0,,{\an5\pos(960,988)\q2}也不会让现在变成这副模样
+Dialogue: 0,0:00:58.46,0:01:01.18,Main,prologue-013,0,0,0,,{\an5\pos(960,988)\q2}可我怎么可能知道啊
+Dialogue: 0,0:01:01.34,0:01:03.85,Main,prologue-014,0,0,0,,{\an5\pos(960,988)\q2}在那个瞬间，我的手中
+Dialogue: 0,0:01:04.02,0:01:09.02,Main,prologue-015,0,0,0,,{\an5\pos(960,988)\q2}竟握着一个关键转折的开关，足以决定我们所有人的命运
+Dialogue: 0,0:01:09.08,0:01:12.84,Main,prologue-016,0,0,0,,{\an5\pos(960,988)\q2}这种事，我怎么可能知道
+Dialogue: 0,0:01:13.76,0:01:15.42,Main,prologue-017,0,0,0,,{\an5\pos(960,988)\q2}你不妨想想看
+Dialogue: 0,0:01:15.56,0:01:19.32,Main,prologue-018,0,0,0,,{\an5\pos(960,988)\q2}平时，人类有99%的知觉都处于被屏蔽的状态。
+Dialogue: 0,0:01:20.24,0:01:25.02,Main,prologue-019,0,0,0,,{\an5\pos(960,988)\q2}人类远比自己想象中更加愚钝
+Dialogue: 0,0:01:25.48,0:01:30.82,Main,prologue-020,0,0,0,,{\an5\pos(960,988)\q2}日常生活中那些不起眼的小事，根本不会引起我们的注意
+Dialogue: 0,0:01:31.18,0:01:36.58,Main,prologue-021,0,0,0,,{\an5\pos(960,988)\q2}即使察觉到，也不是转眼就忘，就是大脑根本不去处理
+Dialogue: 0,0:01:36.96,0:01:38.80,Main,prologue-022,0,0,0,,{\an5\pos(960,988)\q2}真想对那时的自己说
+Dialogue: 0,0:01:39.00,0:01:40.91,Main,prologue-023,0,0,0,,{\an5\pos(960,988)\q2}不要粗心大意
+Dialogue: 0,0:01:41.16,0:01:43.16,Main,prologue-024,0,0,0,,{\an5\pos(960,988)\q2}不要轻率行事
+Dialogue: 0,0:01:43.36,0:01:45.78,Main,prologue-025,0,0,0,,{\an5\pos(960,988)\q2}不要视而不见
+Dialogue: 0,0:01:46.14,0:01:48.44,Main,prologue-026,0,0,0,,{\an5\pos(960,988)\q2}多留一个心眼啊
+Dialogue: 0,0:01:48.84,0:01:53.78,Main,prologue-027,0,0,0,,{\an5\pos(960,988)\q2}那个名为命运的女神，远比想象中更加恶劣
+Dialogue: 0,0:01:53.98,0:01:59.25,Main,prologue-028,0,0,0,,{\an5\pos(960,988)\q2}她无时无刻不在你身边布下戏弄人的丝线……！

@@ -27,4 +27,6 @@ python3 src/EasyPatcher/build.py
 - `MagesLib.dll`
 - `fastJSON.dll`
 
-将这四个文件与项目根目录的完整 `berd` 文件夹复制到同一个新目录，即可在 Windows 中运行 `EasyPatcher.exe`。请保留许可证和使用说明；不要只复制 EXE。构建不会覆盖项目根目录的已安装补丁器或修改补丁数据。
+将这四个文件与项目根目录的完整 `berd` 文件夹复制到同一个新目录，即可在 Windows 中运行 `EasyPatcher.exe`。其中 `berd/video-subtitles/` 必须保留完整：它包含 `bink2w32.dll` 字幕代理、`runtime/lib` 的渲染依赖、私有字体和 ASS 文件。该目录不应包含用户游戏的原始 `bink2w32.dll`。
+
+补丁器首次安装时从用户游戏目录备份经校验的原始解码器为 `bink2w32_original.dll`，移除外置字幕时恢复它；原始 `.bk2` 视频不参与构建或安装复制。构建不会覆盖项目根目录的已安装补丁器或修改补丁数据。

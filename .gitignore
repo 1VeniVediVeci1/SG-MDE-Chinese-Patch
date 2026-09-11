@@ -4,6 +4,7 @@
 *.pdb
 *.exe
 MagesLib.dll
+/src/VideoSubtitleProxy/build/
 
 # 本地与恢复文件
 .vs/

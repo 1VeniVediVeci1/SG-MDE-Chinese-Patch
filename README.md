@@ -13,10 +13,12 @@
 - 优化过剧情时文本的UI。
 - 修复 `Lab mem` 等英文词组的空格过宽问题，恢复原版英文词间距。
 - 规范对白中的嵌套引号，采用外层双引号、内层单引号，保留普通引用和正确的更深层嵌套。
+- 为片头 OP 和序章追加简体中文外挂字幕，保留原始视频、音频及日英硬字幕，不重新编码视频。
+- 视频字幕随“应用补丁”一起安装，支持重复更新及单独移除、恢复原解码器。
 
 ## 下载与安装
 
-从 [v1.2 Release](https://github.com/1VeniVediVeci1/SG-MDE-Chinese-Patch/releases/latest) 下载 **`SG-MDE-Chinese-Patch-v1.2.zip`**。请下载这个完整安装包，而不是 GitHub 自动生成的 `Source code` 压缩包。
+从 [v1.2 Release](https://github.com/1VeniVediVeci1/SG-MDE-Chinese-Patch/releases/latest) 下载 **`SG-MDE-Chinese-Patch-v1.2.zip`**。包含视频外挂字幕的修订版为 **v1.2-r4**，补丁器界面版本仍为 v1.2。请下载这个完整安装包，而不是 GitHub 自动生成的 `Source code` 压缩包。
 
 1. 在 Steam 中将游戏语言设为**英语**，等待更新完成，然后退出游戏。
 2. 将补丁 ZIP **完整解压**到一个可写目录，保留 `EasyPatcher.exe`、两个 DLL、配置文件与 `berd` 文件夹的相对位置。
@@ -26,6 +28,12 @@
 运行环境：Windows，.NET Framework 4.5 或兼容的较新版本。不需要 Python、.NET SDK 或开发工具。
 
 请先自行备份重要存档。补丁器会在游戏目录创建 `USRDIR.bak`，用于保留资源备份；**不要随意点击“删除备份”**。重复应用补丁时会使用该备份作为基线。
+
+### 片头与序章外置字幕
+
+“应用补丁”会一并部署 OP01 和 prologue01 的外置 ASS 字幕及其私有字体、渲染依赖。原始 `.bk2` 视频不会被修改。首次部署时，补丁器只从游戏目录读取受支持的原始 `bink2w32.dll`，将其原样备份为 `bink2w32_original.dll`，再放置字幕代理；安装包不包含原始游戏解码器。
+
+补丁器会校验已管理文件和运行时目录，发现不同的代理、未知备份、被修改的文件或额外文件时会拒绝覆盖或删除。可在退出游戏后使用“移除视频字幕”恢复原始 `bink2w32.dll`；该操作保留 `bink2w32_original.dll` 作为恢复副本，也不会改动视频文件、存档或其他资源包。
 
 ### 恢复原版
 
@@ -66,6 +74,7 @@
 - `src/EasyPatcher`：补丁器界面及应用逻辑。
 - `src/MagesLib`：MPK / SCX 读取、修改与写入库，来源于 MagesTools。
 - `berd`：本版本使用的文本与资源补丁数据。
+- `berd/video-subtitles`：外置 ASS 字幕代理、私有字体与渲染依赖；不含原始游戏解码器或视频。
 - `fastJSON.dll`：JSON 依赖，与 MagesTools 随附版本一致。
 
 构建方法见 **[源码构建说明](src/BUILD.md)**。
